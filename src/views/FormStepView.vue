@@ -24,7 +24,7 @@ const premium = () => {
 };
 
 const isSummaryPage = () => {
-  return +lodash.get(route, "query.index") === 2;
+  return +lodash.get(route, "params.id") === 2;
 };
 </script>
 

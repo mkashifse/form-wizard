@@ -32,43 +32,46 @@ export function useFormNavigation(_wizard: any) {
   });
 
   watch(
-    () => route.query.index,
+    () => route.params.id,
     (to) => {
       stepIndex.value = to ? +to : 0;
     },
     { flush: "pre", immediate: true, deep: true }
   );
 
+  const paramId = () => {
+    return route.params.id;
+  };
+
   const next = (index = -1) => {
-    let to = route.query.index;
+    let to = paramId();
     let nextIndex = to ? +to + 1 : 0;
     nextIndex = nextIndex % _wizard.value.steps.length;
     router.push({
-      query: {
-        index: index === 1 ? index : nextIndex,
+      params: {
+        id: index === 1 ? index : nextIndex,
       },
     });
   };
 
   const back = () => {
-    let to = route.query.index;
-
+    let to = paramId();
     let nextIndex = to ? +to - 1 : 0;
     nextIndex = nextIndex < 0 ? 0 : nextIndex;
     if (to && +to === -1) {
       nextIndex = 1;
     }
     router.push({
-      query: {
-        index: nextIndex,
+      params: {
+        id: nextIndex,
       },
     });
   };
 
   const goToError = () => {
     router.push({
-      query: {
-        index: -1,
+      params: {
+        id: -1,
       },
     });
   };
