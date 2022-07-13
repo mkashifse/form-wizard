@@ -1,7 +1,6 @@
 # Multistep Formwizard App
 
-Kindly visit the following link to see the demo live.
-```https://form-wizard-rho.vercel.app/formstep/0```
+Kindly visit the following link to see the live demo. [Live Demo](https://form-wizard-rho.vercel.app/)
 
 
 
