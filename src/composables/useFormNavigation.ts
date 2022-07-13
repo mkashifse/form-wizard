@@ -13,6 +13,14 @@ export function useFormNavigation(_wizard: any) {
 
   const setErrorStep = (step: FormStep) => {
     errorStep.value = step;
+    errorStep.value.actions = [
+      {
+        ...(step as any).actions[0],
+        events: {
+          onclick: () => next(1),
+        },
+      },
+    ];
   };
 
   const isError = () => {
@@ -31,13 +39,13 @@ export function useFormNavigation(_wizard: any) {
     { flush: "pre", immediate: true, deep: true }
   );
 
-  const next = () => {
+  const next = (index = -1) => {
     let to = route.query.index;
     let nextIndex = to ? +to + 1 : 0;
     nextIndex = nextIndex % _wizard.value.steps.length;
     router.push({
       query: {
-        index: nextIndex,
+        index: index === 1 ? index : nextIndex,
       },
     });
   };

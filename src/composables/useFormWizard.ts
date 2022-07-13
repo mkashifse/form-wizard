@@ -101,6 +101,11 @@ export const useFormWizard = () => {
         }
       });
     });
+    (formData.errorStep as any)["events"] = {
+      onclick: () => {
+        debugger
+      },
+    };
     setForm(formData.steps as FormStep[]);
     setErrorStep(formData.errorStep as FormStep);
   };
