@@ -77,7 +77,7 @@ I created a generic StepForm composable which contains the following features.
 
 ### .wizard : {steps:[]}
 
-swizard is a reactive object which the whole data structure of all the pages of the wizard.
+wizard is a reactive object which hold the whole data structure of all the pages in form wizard.
 
 ### .formValues :{key:value ..}
 
