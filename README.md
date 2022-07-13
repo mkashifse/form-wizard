@@ -1,3 +1,18 @@
+# Multistep Formwizard App
+
+Kindly visit the following link to see the demo live.
+```https://form-wizard-rho.vercel.app/formstep/0```
+
+
+
+#### Application Screen shots
+
+![alt text](https://form-wizard-rho.vercel.app/page1.png)
+![alt text](https://form-wizard-rho.vercel.app/page2.png)
+![alt text](https://form-wizard-rho.vercel.app/page3.png)
+
+
+
 # Tech Stack I used
 
 1.  Vue3
@@ -297,9 +312,5 @@ the above are the types which are being used in the application.
 
 The above json depicts the structure of the wizard. The events of the button `Back` & `Next` are attached dynamicly when json file is loaded.
 
-
-![alt text](https://form-wizard-rho.vercel.app/page1.png)
-![alt text](https://form-wizard-rho.vercel.app/page2.png)
-![alt text](https://form-wizard-rho.vercel.app/page3.png)
 
 
