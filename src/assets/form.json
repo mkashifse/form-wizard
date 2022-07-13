@@ -1,0 +1,110 @@
+{
+  "steps": [
+    {
+      "title": "Hello There!",
+      "controls": [
+        {
+          "type": "onlyText",
+          "label": "Lets buy some insurance. its going to take some while",
+          "slug": "intro"
+        }
+      ],
+      "actions": [
+        {
+          "type": "button",
+          "label": "Start",
+          "cls": "btn-primary",
+          "events": {}
+        }
+      ]
+    },
+    {
+      "title": "Tell us about yourself",
+      "controls": [
+        {
+          "type": "text",
+          "label": "Name",
+          "placeholder": "Add text",
+          "slug": "Name"
+        },
+        {
+          "type": "number",
+          "label": "Age",
+          "placeholder": "Add number",
+          "slug": "Age"
+        },
+        {
+          "type": "select",
+          "label": "where do you live",
+          "slug": "country",
+          "placeholder": "Add text",
+          "model": {
+            "label": "Hong Kong",
+            "meta": { "currency": "HKD", "rate": 1 }
+          },
+          "options": [
+            { "label": "Hong Kong", "meta": { "currency": "HKD", "rate": 1 } },
+            { "label": "USA", "meta": { "currency": "USD", "rate": 2 } },
+            { "label": "Australia", "meta": { "currency": "AUD", "rate": 3 } }
+          ]
+        },
+        {
+          "type": "radio",
+          "label": "package",
+          "model": { "label": "Standard", "meta": { "rate": 0 } },
+          "options": [
+            { "label": "Standard", "meta": { "rate": 0 } },
+            { "meta": { "rate": 50 } },
+            { "meta": { "rate": 75 } }
+          ],
+          "slug": "package"
+        }
+      ],
+      "actions": [
+        {
+          "type": "button",
+          "label": "Back",
+          "cls": "btn-default",
+          "events": {}
+        },
+        {
+          "type": "button",
+          "label": "Next",
+          "cls": "btn-primary",
+          "events": {}
+        }
+      ]
+    },
+    {
+      "id": "summarypage",
+      "title": "Summary",
+      "controls": [],
+      "actions": [
+        {
+          "type": "button",
+          "label": "Back",
+          "cls": "btn-default",
+          "events": {}
+        },
+        { "type": "button", "label": "Buy", "cls": "btn-primary", "events": {} }
+      ]
+    }
+  ],
+  "errorStep": {
+    "title": "Ooops",
+    "controls": [
+      {
+        "type": "onlyText",
+        "label": "Your age over our accepted limit. We are sorry but we cannot insure you now"
+      }
+    ],
+    "actions": [
+      {
+        "type": "button",
+        "label": "Ok :(",
+        "cls": "btn-primary",
+        "events": {}
+      }
+    ]
+  }
+}

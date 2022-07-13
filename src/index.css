@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],
+input[type="number"],
+select {
+  @apply border p-4 rounded text-sm text-slate-600 block w-full font-semibold;
+}
+
+label {
+  @apply text-slate-500 font-bold capitalize;
+}
+
+button {
+  @apply p-4 rounded text-sm w-1/4 font-bold;
+}
+
+.btn-default {
+  @apply bg-slate-100 border border-slate-300 text-slate-600
+}
+
+.btn-primary {
+  @apply bg-slate-600 text-slate-100;
+}
+
+button:hover {
+  @apply shadow opacity-90;
+}
+
+.card {
+  @apply shadow rounded-md bg-white border;
+}
+
+.font-libre {
+  font-family: 'Lora', serif;
+}
